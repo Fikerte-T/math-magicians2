@@ -23,7 +23,7 @@ Additional description about the project and its features.
 
 1. To get a local copy up and running follow these simple steps.
 ```bash
-git@github.com:Fikerte-T/math-magicians.git
+git@github.com:Fikerte-T/math-magicians2.git
 ```
 2. To install npm, run the following command in your terminal, in the project directory
 ```bash
