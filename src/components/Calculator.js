@@ -31,24 +31,24 @@ class Calculator extends React.Component {
         <div className="result">{result || '0'}</div>
         <div className="buttons-container">
           <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">AC</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">+/-</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">%</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button sign">&divide;</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">7</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">8</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">9</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button sign">x</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">4</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">5</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">6</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button sign">-</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">1</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">2</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">3</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button sign">+</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button zero">0</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">.</button>
-          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">=</button>
+          <button name="+/-" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">+/-</button>
+          <button name="%" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">%</button>
+          <button name="÷" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button sign">&divide;</button>
+          <button name="7" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">7</button>
+          <button name="8" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">8</button>
+          <button name="9" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">9</button>
+          <button name="x" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button sign">x</button>
+          <button name="4" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">4</button>
+          <button name="5" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">5</button>
+          <button name="6" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">6</button>
+          <button name="-" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button sign">-</button>
+          <button name="1" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">1</button>
+          <button name="2" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">2</button>
+          <button name="3" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">3</button>
+          <button name="+" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button sign">+</button>
+          <button name="0" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button zero">0</button>
+          <button name="." onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">.</button>
+          <button name="=" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">=</button>
         </div>
       </div>
     );
