@@ -1,38 +1,54 @@
 import React from 'react';
+import calculate from '../logic/calculate';
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      result: 0,
+      total: '',
+      next: '',
+      operation: null,
     };
   }
 
+  clickHandler(state, bName) {
+    const resultObj = calculate(state, bName);
+    this.setState({
+      ...resultObj,
+    });
+  }
+
   render() {
-    const { result } = this.state;
+    const { next, total, operation } = this.state;
+    let result = '0';
+    if (total) {
+      result = `${total} ${operation || ''} ${next || ''}`;
+    } else if (next) {
+      result = next;
+    }
     return (
       <div className="wrapper">
-        <div className="result">{result}</div>
+        <div className="result">{result || '0'}</div>
         <div className="buttons-container">
-          <button type="button" className="button">AC</button>
-          <button type="button" className="button">+/-</button>
-          <button type="button" className="button">%</button>
-          <button type="button" className="button sign">&divide;</button>
-          <button type="button" className="button">7</button>
-          <button type="button" className="button">8</button>
-          <button type="button" className="button">9</button>
-          <button type="button" className="button sign">x</button>
-          <button type="button" className="button">4</button>
-          <button type="button" className="button">5</button>
-          <button type="button" className="button">6</button>
-          <button type="button" className="button sign">-</button>
-          <button type="button" className="button">1</button>
-          <button type="button" className="button">2</button>
-          <button type="button" className="button">3</button>
-          <button type="button" className="button sign">+</button>
-          <button type="button" className="button zero">0</button>
-          <button type="button" className="button">.</button>
-          <button type="button" className="button">=</button>
+          <button name="AC" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">AC</button>
+          <button name="+/-" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">+/-</button>
+          <button name="%" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">%</button>
+          <button name="÷" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button sign">&divide;</button>
+          <button name="7" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">7</button>
+          <button name="8" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">8</button>
+          <button name="9" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">9</button>
+          <button name="x" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button sign">x</button>
+          <button name="4" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">4</button>
+          <button name="5" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">5</button>
+          <button name="6" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">6</button>
+          <button name="-" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button sign">-</button>
+          <button name="1" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">1</button>
+          <button name="2" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">2</button>
+          <button name="3" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">3</button>
+          <button name="+" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button sign">+</button>
+          <button name="0" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button zero">0</button>
+          <button name="." onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">.</button>
+          <button name="=" onClick={(e) => this.clickHandler(this.state, e.target.name)} type="button" className="button">=</button>
         </div>
       </div>
     );
