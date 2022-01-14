@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Quote = () => (
-  <div>
+const Quotes = () => (
+  <div className="quote-page">
     <blockquote>
       Mathematics is not about numbers, equations, computations, or algorithms:
       it is about understanding. -
@@ -10,4 +10,4 @@ const Quote = () => (
   </div>
 );
 
-export default Quote;
+export default Quotes;
